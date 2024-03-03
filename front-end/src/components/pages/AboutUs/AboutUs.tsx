@@ -3,7 +3,7 @@ import { FC } from "react";
 import Stack from "@mui/material/Stack";
 
 
-export const Home: FC = () => {
+export const AboutUs: FC = () => {
   return (
     <Stack>
       <Typography
