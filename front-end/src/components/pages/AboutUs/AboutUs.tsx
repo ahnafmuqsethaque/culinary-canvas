@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import { FC } from "react";
 import Stack from "@mui/material/Stack";
 import { Header } from "../Header"
+import { Footer } from '../Footer'
 
 
 export const AboutUs: FC = () => {
@@ -132,6 +133,8 @@ export const AboutUs: FC = () => {
           Culinary Canvas presents a promising solution to the challenges in the culinary landscape, offering a unique blend of convenience, diversity, and personalized experiences. The strategic alignment of features, rigorous testing processes, and mitigation of identified risks position Culinary Canvas for success in a competitive market. Ongoing focus on intellectual property protection ensures the sustainability and innovation of the platform.
 
         </Typography>
+
+        <Footer />
     </Stack>
   );
 };

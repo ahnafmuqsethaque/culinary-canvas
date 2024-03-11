@@ -1,11 +1,13 @@
 import Typography from "@mui/material/Typography";
 import { FC } from "react";
 import Stack from "@mui/material/Stack";
-
+import { Header } from "../Header"
+import { Footer } from '../Footer'
 
 export const Home: FC = () => {
   return (
     <Stack>
+      <Header />
       <Typography
         sx={{
           fontFamily: "Montserrat",
@@ -18,6 +20,7 @@ export const Home: FC = () => {
       >
         HOMEHOMEHOMEHOMEHOME
       </Typography>
+      <Footer />
     </Stack>
   );
 };
