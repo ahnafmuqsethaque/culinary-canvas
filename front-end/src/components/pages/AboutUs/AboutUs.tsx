@@ -1,11 +1,13 @@
 import Typography from "@mui/material/Typography";
 import { FC } from "react";
 import Stack from "@mui/material/Stack";
+import { Header } from "../Header"
 
 
 export const AboutUs: FC = () => {
   return (
     <Stack>
+      <Header />
       <Typography
         sx={{
           fontFamily: "Lexend",
