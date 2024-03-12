@@ -10,19 +10,11 @@ export const OrderItem: FC = () => {
       sx={{
         width: "100%",
         height: "100%",
-<<<<<<< HEAD
-        maxWidth: "440px",
-        //maxHeight: 400,
-        p: "24px",
-        background: "white",
-        borderRadius: 12,
-=======
         maxWidth: "300px",
         maxHeight: 300,
         p: "16px",
         background: "white",
         borderRadius: 8,
->>>>>>> fix-remainders
         justifyContent: "center",
         alignItems: "center",
         gap: 1,
@@ -30,11 +22,7 @@ export const OrderItem: FC = () => {
         spacing: 1,
       }}
     >
-<<<<<<< HEAD
-      <Stack flexDirection="row" sx={{}}>
-=======
       <Stack flexDirection="row">
->>>>>>> fix-remainders
         <img
           style={{
             // left: 0,
@@ -45,33 +33,11 @@ export const OrderItem: FC = () => {
           }}
           src={exampleFood}
         />
-<<<<<<< HEAD
-        {/* <Typography
-          sx={{
-            color: "black",
-            fontSize: 24,
-            fontFamily: "Montserrat",
-            fontWeight: "600",
-            lineHeight: 31.2,
-            wordWrap: "break-word",
-            // left: 10,
-            // top: 10,
-            // position: "absolute",
-          }}
-        >
-          Thai
-        </Typography> */}
-=======
->>>>>>> fix-remainders
       </Stack>
       <Typography
         style={{
           color: "black",
-<<<<<<< HEAD
-          fontSize: 24,
-=======
           fontSize: 18,
->>>>>>> fix-remainders
           fontFamily: "Montserrat",
           fontWeight: "700",
         }}
@@ -92,11 +58,7 @@ export const OrderItem: FC = () => {
           sx={{
             textAlign: "center",
             color: "black",
-<<<<<<< HEAD
-            fontSize: 24,
-=======
             fontSize: 16,
->>>>>>> fix-remainders
             fontFamily: "Montserrat",
             fontWeight: "600",
           }}
