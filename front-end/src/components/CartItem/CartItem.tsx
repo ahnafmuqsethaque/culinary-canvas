@@ -14,7 +14,7 @@ export const CartItem: FC = () => {
         width: "fit-content",
         height: "100%",
         //maxWidth: "840px",
-        maxHeight: "400px",
+        maxHeight: "180px",
         //maxHeight: 400,
         //p: "0 24px",
         background: "white",
@@ -30,17 +30,16 @@ export const CartItem: FC = () => {
       <Stack
         borderRadius="12px 0 0 12px"
         boxSizing="border-box"
-        sx={{ height: "200px", width: "60px" }}
+        sx={{ height: "100px", width: "60px" }}
         alignItems="center"
         justifyContent="center"
       >
         <Typography
           style={{
-            //width: "100%",
             color: "black",
-            fontSize: 24,
+            fontSize: 18,
             fontFamily: "Montserrat",
-            fontWeight: "600",
+            fontWeight: "700",
           }}
         >
           1
@@ -52,7 +51,7 @@ export const CartItem: FC = () => {
             width: "100%",
             height: "100%",
             maxHeight: "200px",
-            maxWidth: "290px",
+            maxWidth: "220px",
           }}
           src={exampleFood}
         />
@@ -68,7 +67,7 @@ export const CartItem: FC = () => {
             style={{
               width: "100%",
               color: "black",
-              fontSize: 24,
+              fontSize: 20,
               fontFamily: "Montserrat",
               fontWeight: "700",
             }}
@@ -80,7 +79,7 @@ export const CartItem: FC = () => {
             sx={{
               textAlign: "center",
               color: "black",
-              fontSize: 24,
+              fontSize: 18,
               fontFamily: "Montserrat",
               fontWeight: "600",
             }}
@@ -92,11 +91,9 @@ export const CartItem: FC = () => {
         <Stack
           justifyContent="center"
           sx={{
-            height: "200px",
-            width: "120px",
+            height: "180px",
+            width: "100px",
             background: "red",
-            // display: "block",
-
             borderRadius: "0px 12px 12px 0px",
             boxSizing: "border-box",
             position: "relative",

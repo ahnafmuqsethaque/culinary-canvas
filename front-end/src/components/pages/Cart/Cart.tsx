@@ -18,6 +18,8 @@ export const Cart: FC = () => {
     >
       <Typography
         style={{
+          alignSelf: "flex-start",
+          padding: "0 140px",
           color: "black",
           fontSize: 36,
           fontFamily: "Montserrat",
@@ -34,7 +36,7 @@ export const Cart: FC = () => {
         sx={{
           width: "100%",
           height: "100%",
-          background: "#F3F9EE",
+          background: "rgba(214, 86, 86, 0.15)",
         }}
       >
         <CartItem />
@@ -52,7 +54,7 @@ export const Cart: FC = () => {
           <Typography
             style={{
               color: "black",
-              fontSize: 28,
+              fontSize: 24,
               fontFamily: "Montserrat",
               fontWeight: "700",
             }}
@@ -62,7 +64,7 @@ export const Cart: FC = () => {
           <Typography
             style={{
               color: "black",
-              fontSize: 28,
+              fontSize: 24,
               fontFamily: "Montserrat",
               fontWeight: "700",
             }}

@@ -3,25 +3,31 @@ import { FC } from "react";
 import Stack from "@mui/material/Stack";
 import { OrderItem } from "../../OrderItem";
 import TextField from "@mui/material/TextField";
-import { OrderCounter } from "../../OrderCounter";
-import { CartItem } from "../../CartItem";
 
 export const Home: FC = () => {
   return (
     <Stack
+      boxSizing="border-box"
+      //p="0px 180px"
       sx={{
         width: "100%",
         height: "100%",
       }}
     >
-      <TextField
-        label="Food, Chefs, Drinks, etc."
-        variant="outlined"
-        InputProps={{ sx: { borderRadius: 50 } }}
-        sx={{ maxWidth: "1000px" }}
-      />
-      <OrderCounter />
+      <Stack p="0 140px">
+        <TextField
+          label="Food, Chefs, Drinks, etc."
+          variant="outlined"
+          InputProps={{
+            sx: { borderRadius: 50, height: 40, alignContent: "flex-start" },
+          }}
+          sx={{ maxWidth: "800px", border: "1px solid blue", height: 40 }}
+        />
+      </Stack>
+
+      {/* <OrderCounter /> */}
       <Typography
+        p="0px 140px"
         style={{
           color: "black",
           fontSize: 36,
@@ -35,12 +41,12 @@ export const Home: FC = () => {
         flexDirection="row"
         alignItems="center"
         justifyContent="flex-start"
-        padding={4}
+        p="36px 140px"
         gap="16px"
         sx={{
           width: "100%",
-          height: "100%",
-          background: "#F3C2EE",
+          //height: "100%",
+          background: "rgba(214, 86, 86, 0.15)",
         }}
       >
         <OrderItem />

@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AboutUs } from "./components/pages/AboutUs";
 import { Home } from "./components/pages/Home";
 import { Cart } from "./components/pages/Cart";
+import { LayoutBuilder } from "./components/pages/LayoutBuilder";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,9 +16,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/" element={<LayoutBuilder component={<Home />} />} />
+        <Route
+          path="/about-us"
+          element={<LayoutBuilder component={<AboutUs />} />}
+        />
+        <Route path="/cart" element={<LayoutBuilder component={<Cart />} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
