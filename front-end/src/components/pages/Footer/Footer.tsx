@@ -1,27 +1,58 @@
 import Typography from "@mui/material/Typography";
 import { FC } from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const Footer: FC = () => {
+  const footerTypographyProps = {
+    color: "#FFF",
+    fontFamily: "Barlow",
+    fontSize: "18px",
+    fontStyle: "normal",
+    fontWeight: 700,
+    lineHeight: "150%",
+  };
   return (
-    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0, backgroundColor: '#FFFFFF' }}>
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-evenly' }}>
-          <Typography
-            variant="h6"
-            sx={{ color: "#000000" , fontSize: "30px"}}
-          >
-            Culinary Canvas
-          </Typography>
-          <Button sx={{ color: "#000000", fontSize: "25px" }}>Privacy Policy</Button>
-          <Button sx={{ color: "#000000", fontSize: "25px" }}>Terms of Service</Button>
-          <Button sx={{ color: "#000000", fontSize: "25px" }}>Support</Button>
-          <Button sx={{ color: "#000000", fontSize: "25px" }}>Contact Us</Button>
-        </Box>
-      </Toolbar>
-    </AppBar>
+    <Stack
+      direction="row"
+      sx={{ background: "#D65656" }}
+      justifyContent="flex-start"
+      alignItems="flex-start"
+      spacing={24}
+      p="80px 160px"
+      boxSizing="border-box"
+    >
+      <Typography
+        sx={{
+          color: "#FFF",
+          fontFamily: "Beau Rivage",
+          fontSize: "36px",
+          fontStyle: "normal",
+          fontWeight: 400,
+          lineHeight: "120%",
+        }}
+      >
+        Culinary Canvas
+      </Typography>
+      <Stack direction="row" spacing={12}>
+        <Stack spacing={2}>
+          <Typography sx={footerTypographyProps}>Home</Typography>
+          <Typography sx={footerTypographyProps}>About Us</Typography>
+        </Stack>
+        <Stack spacing={2}>
+          <Typography sx={footerTypographyProps}>Order</Typography>
+          <Typography sx={footerTypographyProps}>Cook with us</Typography>
+        </Stack>
+        <Stack justifyContent="flex-end">
+          <Typography sx={footerTypographyProps}>Get in touch</Typography>
+          <Stack direction="row" alignItems="center">
+            <InstagramIcon sx={{ color: "white" }} />
+            <Typography sx={footerTypographyProps}>
+              culinarycanvasubc
+            </Typography>
+          </Stack>
+        </Stack>
+      </Stack>
+    </Stack>
   );
 };
