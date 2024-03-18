@@ -3,8 +3,11 @@ import { FC } from "react";
 import Stack from "@mui/material/Stack";
 import exampleFood from "../../assets/exampleFood.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { IconButton } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export const OrderItem: FC = () => {
+  const navigate = useNavigate();
   return (
     <Stack
       sx={{
@@ -50,9 +53,6 @@ export const OrderItem: FC = () => {
         justifyContent="space-between"
         alignItems="center"
         width="95%"
-        // sx={{
-        //   p: "100px",
-        // }}
       >
         <Typography
           sx={{
@@ -65,7 +65,9 @@ export const OrderItem: FC = () => {
         >
           $16 | 2km away
         </Typography>
-        <ShoppingCartIcon />
+        <IconButton onClick={() => navigate("/cart")}>
+          <ShoppingCartIcon />
+        </IconButton>
       </Stack>
     </Stack>
   );

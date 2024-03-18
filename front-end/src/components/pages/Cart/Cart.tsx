@@ -39,8 +39,8 @@ export const Cart: FC = () => {
           background: "rgba(214, 86, 86, 0.15)",
         }}
       >
-        <CartItem />
-        <CartItem />
+        <CartItem id={1}/>
+        <CartItem id={2}/>
       </Stack>
       <Stack
         direction="row"

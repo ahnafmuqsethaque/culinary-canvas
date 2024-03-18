@@ -6,7 +6,7 @@ import { OrderCounter } from "../OrderCounter";
 import IconButton from "@mui/material/IconButton";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-export const CartItem: FC = () => {
+export const CartItem: FC<{id: number}> = (props) => {
   return (
     <Stack
       flexDirection="row"
@@ -86,7 +86,7 @@ export const CartItem: FC = () => {
           >
             $16 | 2km away
           </Typography>
-          <OrderCounter />
+          <OrderCounter id={props.id}/>
         </Stack>
         <Stack
           justifyContent="center"

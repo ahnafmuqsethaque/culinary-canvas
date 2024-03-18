@@ -1,12 +1,39 @@
 import Typography from "@mui/material/Typography";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-export const OrderCounter: FC = () => {
+export const OrderCounter: FC<{
+  id?: number;
+}> = (props) => {
+  const [count, setCount] = useState(0);
+  const [id, setID] = useState(props.id);
+
+  useEffect(() => {
+    // Retrieve count from local storage on component mount
+    const storedCount = localStorage.getItem(`count-${props.id}`);
+    if (storedCount) {
+      setCount(parseInt(storedCount));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save count to local storage whenever it changes
+    localStorage.setItem(`count-${props.id}`, count.toString());
+  }, [count]);
+
+  const increment = () => {
+    setCount(count + 1);
+    console.log(localStorage);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
   return (
     <Stack
       flexDirection="row"
@@ -24,14 +51,15 @@ export const OrderCounter: FC = () => {
       }}
     >
       <IconButton
-        aria-label="add"
+        aria-label="remove"
         style={{
           color: "white",
           fontFamily: "Montserrat",
           fontWeight: "600",
         }}
+        onClick={decrement}
       >
-        <AddIcon />
+        <RemoveIcon />
       </IconButton>
       <Typography
         style={{
@@ -40,17 +68,18 @@ export const OrderCounter: FC = () => {
           fontWeight: "600",
         }}
       >
-        1
+        {count}
       </Typography>
       <IconButton
-        aria-label="remove"
+        onClick={increment}
+        aria-label="add"
         style={{
           color: "white",
           fontFamily: "Montserrat",
           fontWeight: "600",
         }}
       >
-        <RemoveIcon />
+        <AddIcon />
       </IconButton>
     </Stack>
   );

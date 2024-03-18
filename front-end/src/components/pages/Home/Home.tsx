@@ -18,10 +18,13 @@ export const Home: FC = () => {
         <TextField
           label="Food, Chefs, Drinks, etc."
           variant="outlined"
+          size="small"
           InputProps={{
-            sx: { borderRadius: 50, height: 40, alignContent: "flex-start" },
+            sx: { borderRadius: 50 },
           }}
-          sx={{ maxWidth: "800px", border: "1px solid blue", height: 40 }}
+          sx={{
+            maxWidth: "800px",
+          }}
         />
       </Stack>
 
