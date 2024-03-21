@@ -4,10 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AboutUs } from "./components/pages/AboutUs";
-import { Home } from "./components/pages/Home";
-import { Cart } from "./components/pages/Cart";
-import { LayoutBuilder } from "./components/pages/LayoutBuilder";
+import { AboutUs } from "./component/pages/AboutUs";
+import { Home } from "./component/pages/Home";
+import { Cart } from "./component/pages/Cart";
+import { LayoutBuilder } from "./component/pages/LayoutBuilder";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
